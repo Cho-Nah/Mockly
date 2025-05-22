@@ -1,5 +1,4 @@
 import {
-  Button,
   Navbar,
   NavbarBrand,
   NavbarCollapse,
@@ -9,14 +8,16 @@ import {
 
 export function Header() {
   return (
-    <Navbar fluid rounded>
+    <Navbar fluid>
       <NavbarBrand>
         <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
           Mockly
         </span>
       </NavbarBrand>
       <div className="flex md:order-2">
-        <Button>Get started</Button>
+        <button className="w-28 cursor-pointer rounded-lg bg-purple-500 p-2 text-stone-50">
+          Get started
+        </button>
         <NavbarToggle />
       </div>
       <NavbarCollapse>

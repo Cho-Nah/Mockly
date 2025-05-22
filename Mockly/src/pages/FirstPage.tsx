@@ -1,5 +1,6 @@
 import { Header } from "../features/Header";
 import { Title } from "../features/Title";
+import { FooterPlace } from "../features/Footer";
 
 export function FirstPage() {
   return (
@@ -7,6 +8,7 @@ export function FirstPage() {
       <div>
         <Header />
         <Title />
+        <FooterPlace />
       </div>
     </>
   );
