@@ -5,7 +5,7 @@ import { FooterPlace } from "../features/Footer";
 export function FirstPage() {
   return (
     <>
-      <div>
+      <div className="dark:bg-gray-800">
         <Header />
         <Title />
         <FooterPlace />

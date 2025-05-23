@@ -1,15 +1,7 @@
-import { Chat } from "../pages/Chat";
-import { useState } from "react";
-
 export function Title() {
-  const [showChat, setShowChat] = useState(false);
-
   return (
     <>
       <div>
-        {showChat ? (
-          <Chat />
-        ) :
         <div className="mt-56 flex w-full flex-col items-center text-center">
           <div>
             <h1 className="text-8xl">Mockly</h1>
@@ -21,7 +13,6 @@ export function Title() {
           </button>
         </div>
       </div>
-}
     </>
   );
 }
