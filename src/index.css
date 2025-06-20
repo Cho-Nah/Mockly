@@ -1,8 +1,41 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "Poppins";
-  font-style: normal;
+/* @font-face {
+  font-family: "Poppins-Main";
   font-display: swap;
-  src: url("./assets/fonts/Poppins-Regular.ttf") format("truetype");
+  src: url(./assets/fonts/Poppins-Regular.ttf) format("truetype");
 }
+
+@font-face {
+  font-family: "Poppins-Medium";
+  font-display: swap;
+  src: url(./assets/fonts/Poppins-Medium.ttf) format("truetype");
+} */
+
+@font-face {
+  font-family: "Sen-Regular";
+  font-display: swap;
+  src: url(./assets/fonts/Sen-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Sen-Medium";
+  font-display: swap;
+  src: url(./assets/fonts/Sen-Medium.ttf) format("truetype");
+}
+
+.senRegular {
+  font-family: "Sen-Regular";
+}
+
+.senMedium {
+  font-family: "Sen-Medium";
+}
+
+/* .poppinsReg {
+  font-family: "Poppins-Main", sans-serif;
+}
+
+.poppinsMedium {
+  font-family: "Poppins-Medium", sans-serif;
+} */
