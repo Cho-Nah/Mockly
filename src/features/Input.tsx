@@ -1,8 +1,9 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 // import { Title } from "./Title";
 
 export function Input() {
   const inputRef = useRef<HTMLInputElement>(null);
+  const [message, setMessage] = useState(true);
 
   function handleFocus() {
     if (inputRef.current) inputRef.current.focus();
@@ -10,7 +11,9 @@ export function Input() {
 
   function handleSendMessage() {
     console.log("Send Message");
+    setMessage(false);
   }
+
   return (
     <div className="w-[650px] mx-auto pt-4 p-2 bg-white/5 rounded-lg flex flex-col gap-4">
       <p className="text-white senRegular">
@@ -33,8 +36,9 @@ export function Input() {
           type="text"
           placeholder="Ask something..."
           ref={inputRef}
+          value={value}
           onKeyDown={(e) => {
-            if (e.key === "Enter") handleSendMessage();
+            if (e.key === "Enter") handleSendMessage(value);
           }}
           className="w-full bg-transparent text-white placeholder-white/60 outline-none text-lg senRegular"
         />
