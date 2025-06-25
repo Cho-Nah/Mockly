@@ -1,9 +1,7 @@
-import { message, setMessage } from "./Input";
-
-export function Title() {
+export function Title({ showTitle }: { showTitle: boolean }) {
   return (
     <div className="relative text-center text-white mb-[10%] ">
-      {message && (
+      {showTitle && (
         <>
           <div className="flex flex-col gap-2">
             <h2 className="text-3xl senMedium">Good to See You!</h2>
