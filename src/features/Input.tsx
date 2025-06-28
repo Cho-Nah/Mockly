@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 
 export function Input() {
   const inputRef = useRef<HTMLInputElement>(null);
-  const [message, setMessage] = useState(true);
+  // const [message, setMessage] = useState(true);
 
   function handleFocus() {
     if (inputRef.current) inputRef.current.focus();
@@ -11,7 +11,7 @@ export function Input() {
 
   function handleSendMessage() {
     console.log("Send Message");
-    setMessage(false);
+    // setMessage(false);
   }
 
   return (
@@ -36,9 +36,9 @@ export function Input() {
           type="text"
           placeholder="Ask something..."
           ref={inputRef}
-          value={value}
+          // value={value}
           onKeyDown={(e) => {
-            if (e.key === "Enter") handleSendMessage(value);
+            if (e.key === "Enter") handleSendMessage();
           }}
           className="w-full bg-transparent text-white placeholder-white/60 outline-none text-lg senRegular"
         />
