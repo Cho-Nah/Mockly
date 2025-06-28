@@ -1,8 +1,11 @@
 import { Upgrade } from "../features/UpgradeButt";
 import { Title } from "../features/Title";
 import { Input } from "../features/Input";
+import { useState } from "react";
 
 export function MainPage() {
+  const [showTitle, setShowTitle] = useState(true);
+
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-gray-900 to-black overflow-hidden">
       {/* Абстрактные фоны */}
@@ -16,8 +19,8 @@ export function MainPage() {
 
       {/* Основной контент */}
       <div className="flex flex-col justify-center items-center h-full mt-56">
-        <Title />
-        <Input />
+        <Title showTitle={showTitle} />
+        <Input setShowTitle={setShowTitle} />
       </div>
     </div>
   );

@@ -1,17 +1,23 @@
 import { useRef, useState } from "react";
-// import { Title } from "./Title";
 
-export function Input() {
+export function Input({
+  setShowTitle,
+}: {
+  setShowTitle: (val: boolean) => void;
+}) {
   const inputRef = useRef<HTMLInputElement>(null);
-  // const [message, setMessage] = useState(true);
+
+  const [value, setValue] = useState("");
+  const [messages, setMessages] = useState<string[]>([]);
 
   function handleFocus() {
     if (inputRef.current) inputRef.current.focus();
   }
 
   function handleSendMessage() {
-    console.log("Send Message");
-    // setMessage(false);
+    console.log("Send Message", value);
+    setShowTitle(false);
+    setValue("");
   }
 
   return (
@@ -36,7 +42,8 @@ export function Input() {
           type="text"
           placeholder="Ask something..."
           ref={inputRef}
-          // value={value}
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
           onKeyDown={(e) => {
             if (e.key === "Enter") handleSendMessage();
           }}
