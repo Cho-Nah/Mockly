@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef } from "react";
+// import { User } from "../entities/type";
+// import { Message } from "../entities/type";
 
 export function Input() {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -50,23 +52,23 @@ export function Input() {
       )}
 
       <div className="w-[320px] mx-auto mb-4 flex flex-col">
-        {/* {messages.map((message, index) => (
+        {messages.map((message, index) => (
           <div
             className="bg-white/10 rounded-lg p-3 mb-2 text-left whitespace-pre-wrap break-words"
             key={index}
           >
             {message}
           </div>
-        ))} */}
+        ))}
       </div>
 
       <div
         className={`w-[650px] mx-auto pt-4 p-2 bg-white/5 rounded-lg flex flex-col gap-4 ${
-          hideTitle ? "mt-24" : "mt-64"
+          hideTitle ? "mt-28" : "mt-64"
         }`}
       >
         <p className="text-white senRegular flex justify-start">
-          Unlock more possibilities with PRO version
+          Unlock more possibilities with BRO version
         </p>
         <div
           className="w-full flex items-center bg-white/10 rounded-lg px-[15px] py-2 cursor-text"
