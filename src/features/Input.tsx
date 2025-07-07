@@ -51,11 +51,15 @@ export function Input() {
         </>
       )}
 
-      <div className="w-[320px] mx-auto mb-4 flex flex-col">
+      <div className="fixed right-[500px] top-18 mx-auto flex flex-col gap-4 items-end">
         {messages.map((message, index) => (
           <div
-            className="bg-white/10 rounded-lg p-3 mb-2 text-left whitespace-pre-wrap break-words"
+            className="bg-white/10 rounded-lg p-3 text-left whitespace-pre-wrap break-words"
             key={index}
+            style={{
+              maxWidth: "320px",
+              minWidth: "50px",
+            }}
           >
             {message}
           </div>
@@ -63,8 +67,8 @@ export function Input() {
       </div>
 
       <div
-        className={`w-[650px] mx-auto pt-4 p-2 bg-white/5 rounded-lg flex flex-col gap-4 ${
-          hideTitle ? "mt-28" : "mt-64"
+        className={`fixed w-[650px] left-0 right-0 mx-auto pt-4 p-2 bg-white/5 rounded-lg flex flex-col gap-4 ${
+          hideTitle ? "bottom-24" : "bottom-4"
         }`}
       >
         <p className="text-white senRegular flex justify-start">
